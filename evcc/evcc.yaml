@@ -1,0 +1,17 @@
+vehicles:
+  - name: kia_niro_ev
+    title: "Kia Niro EV (HA)"
+    type: homeassistant
+    uri: http://homeassistant:8123 # Homeassistant URL
+    token: "long_time_access token got from http://homeassistant:8123/profile/security" # Langzeit-Token
+    
+    sensors:
+      soc: sensor.niro_ev_battery_level             # PFLICHT: SoC in %
+      range: sensor.niro_ev_range_int                   # OPTIONAL: Reichweite in km
+      status: binary_sensor.niro_ev_battery_charge  # OPTIONAL: Ladestatus
+      limitSoc: number.niro_ac_charging_limit              # OPTIONAL: Ladelimit in %
+      odometer: sensor.niro_odometer             # OPTIONAL: Kilometerstand in km
+      climater: binary_sensor.niro_air_conditioner          # OPTIONAL: Klimaanlage (falls verfügbar)
+      finishTime: sensor.niro_estimated_charge_duration  # OPTIONAL: Ladeende-Zeit (falls verfügbar)
+
+    capacity: 64.5  # Batteriekapazität in kWh

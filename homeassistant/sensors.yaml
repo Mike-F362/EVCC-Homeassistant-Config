@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    niro_estimated_charge_end:
+      unique_id: niro_estimated_charge_end
+      friendly_name: Niro Estimated Charge End Time
+      value_template: "{{ now() + timedelta(minutes=(states('sensor.niro_estimated_charge_duration') | int(0))) }}"
+    niro_ev_range_int:
+      unique_id: niro_ev_range_int
+      friendly_name: Niro EV Range int
+      value_template: "{{ states('sensor.niro_ev_range') | float(0) | round() }}"

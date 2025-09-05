@@ -1,0 +1,8 @@
+[submodule "kia_uvo"]
+	path = kia_uvo
+	url = https://github.com/Hyundai-Kia-Connect/kia_uvo
+	branch = storeRefreshToken
+[submodule "hyundai_kia_connect_api"]
+	path = hyundai_kia_connect_api
+	url = https://github.com/marvinwankersteen/hyundai_kia_connect_api
+	branch = Kia-EU-login-fix
