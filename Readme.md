@@ -4,7 +4,7 @@ This is a minimal example for EVCC and Homeassistant (HA) setup using Docker Com
 **Warning: Currently untested!!!**
 
 ## Prerequisites
-- runnning `Docker CE` instance (Linux, Mac, WSL2 + Docker Desktop)
+- Runnning `Docker CE` instance (Linux, Mac, WSL2 + Docker Desktop)
 - `Git` installed
 - Get Access/Refresh tokens following the procedure described here (pos 1): https://github.com/Hyundai-Kia-Connect/kia_uvo/issues/1277#issuecomment-3223019018
 
