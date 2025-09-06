@@ -44,3 +44,6 @@ services:
       - ./evcc/evcc.yaml:/etc/evcc.yaml
       - ./evcc:/root/.evcc
     restart: unless-stopped
+    depends_on:
+      homeassistant:
+        condition: service_started
