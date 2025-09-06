@@ -1,8 +1,7 @@
 services:
-  # HomeAssistant
+  # Home Assistant
   homeassistant:    
-#    container_name: home-assistant
-#    image: "ghcr.io/home-assistant/home-assistant:stable"
+    container_name: home-assistant
     build: .
     environment:
       - TZ=Europe/Berlin
@@ -15,21 +14,11 @@ services:
       - ./homeassistant/db:/config/db
       # use host timezone setting
       - /etc/localtime:/etc/localtime:ro
-      # add kia_uvo custom component
-#      - ./kia_uvo/custom_components/:/config/custom_components
-      # add hyundai_kia_connect_api package directly to kia_uvo custom component (use Kia-EU-login-fix branch)
-#      - ./hyundai_kia_connect_api/hyundai_kia_connect_api/:/config/custom_components/kia_uvo/hyundai_kia_connect_api
-      # override kia_uvo manifest.json to avoit pip package installing for hyundai_kia_connect_api package
-#      - ./kia_uvo_manifest.json:/config/custom_components/kia_uvo/manifest.json
-#      - type: bind
-#        source: ./kia_uvo_manifest.json
-#        target: /config/custom_components/kia_uvo/mainifest.json
     restart: unless-stopped
-#    command: cat cat
     ports:
       - 8123:8123
-    # network_mode: host
 
+  # EVCC
   evcc:
     command:
       - evcc
