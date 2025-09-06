@@ -1,8 +1,6 @@
 # EVCC - Homeassistant Config
 This is a minimal example for EVCC and Homeassistant (HA) setup using Docker Compose. This may be required to use Homeassistant defined vehicle in EVCC.
 
-**Warning: Currently untested!!!**
-
 ## Prerequisites
 - Runnning `Docker CE` instance (Linux, Mac, WSL2 + Docker Desktop)
 - `Git` installed
