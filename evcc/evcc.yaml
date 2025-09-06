@@ -3,7 +3,7 @@ vehicles:
     title: "Kia Niro EV (HA)"
     type: homeassistant
     uri: http://homeassistant:8123 # Homeassistant URL
-    token: "long_time_access token got from http://homeassistant:8123/profile/security" # Langzeit-Token
+    token: long_time_access_token  # Langzeittoken von http://homeassistant:8123/profile/security
     
     sensors:
       soc: sensor.niro_ev_battery_level             # PFLICHT: SoC in %
