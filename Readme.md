@@ -14,14 +14,14 @@ docker compose up
 ``` 
 
 ## Setup HA
-(Adapt following URLs to your hostname configuration)
-- Open Homeassistant Webinterface: http://homeassistant:8123 (or whatever hostname/ip the docker instance is running, maybe localhost)
+(Adapt following URLs to your configuration were the docker instance is running, maybe localhost)
+- Open Homeassistant Webinterface: http://homeassistant:8123 
 - Add custom kia_uvo integration on integrations dashboard (http://homeassistant:8123/config/integrations/dashboard), input aquired **refresh token in password field** 
 - Setup & save long time access token for EVCC: http://homeassistant:8123/profile/security
 
 ## Setup EVCC
-- Adapt Homeassistant-URL to your config
-- Insert Homeassistant long term access token in  `evcc/evcc.yaml` (replace `token` placeholder)
+Edit `evcc/evcc.yaml`:
+- Replace `token` placeholder with your Homeassistant long term access token (from previous step) 
 
 ## Additional Info 
 ### Config Files
